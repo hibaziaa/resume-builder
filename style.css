@@ -1,0 +1,111 @@
+:root {
+  --primary-color: #1e5267;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #212121;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  padding: 4vw;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.navbar .logo {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.navbar .navbarLeft ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 1vw;
+  font-size: 1.2rem;
+}
+
+.buildResume {
+  padding: 10px 12px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color ease-in-out 0.3s;
+}
+
+.buildResume:hover {
+  background-color: #2e6f89;
+}
+
+.buildResume a {
+  color: white;
+}
+
+.heroSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroSection .heroSectionLeft {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5vw;
+}
+
+.heroSection .heroSectionLeft h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.heroSection .heroSectionRight {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 2vw;
+}
+
+.heroSection .heroSectionRight .resumeImage {
+  height: 95%;
+  border: 5px solid var(--primary-color);
+}

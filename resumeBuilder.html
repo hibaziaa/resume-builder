@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Resume</title>
+    <link rel="stylesheet" href="./resumeBuilder.css">
+</head>
+
+<body>
+
+    <h1>
+        Generate Your Resume
+    </h1>
+    <div class="form">
+        <div class="left">
+            <input placeholder="Your Name" type="text" class="name">
+            <input placeholder="Your Title" type="text" class="title">
+            <input placeholder="Your LinkedIn url" type="url" class="linkedin">
+            <input placeholder="Your FaceBook url" type="url" class="facebook">
+            <input placeholder="Your Twitter url" type="url" class="twitter">
+            <input placeholder="Your Portfolio url" type="url" class="portfolio">
+        </div>
+
+        <div class="right">
+            <textarea name="" placeholder="Your Skills (Comma separated)" class="skills" rows="10" cols="60"></textarea>
+            <textarea name="" placeholder="Your About" class="aboutMe" rows="10" cols="60"></textarea>
+            <div class="container">
+                <textarea name="" placeholder="Your Education" class="cont education" rows="10" cols="60"></textarea>
+                <button class="add addEducation">Add another</button>
+            </div>
+
+            <div class="container">
+                <textarea name="" placeholder="Your Experience" class="cont experience" rows="10" cols="60"></textarea>
+                <button class="add addExperience">Add another</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="btnContainer">
+        <button class="generateResume">
+            Generate Resume
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
