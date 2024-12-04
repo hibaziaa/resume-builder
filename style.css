@@ -1,29 +1,36 @@
 :root {
   --primary-color: #1e5267;
+  --secondary-color: #f0f0f0;
+  --accent-color: #3b7a8d;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
+  background-color: #f7f7f7;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 a {
   text-decoration: none;
-  color: #212121;
+  color: inherit;
 }
 
 .main {
-  height: 100vh;
-  width: 100vw;
-  padding: 4vw;
+  min-height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar {
@@ -31,81 +38,164 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 1rem;
 }
 
 .navbar .navbarLeft {
   display: flex;
   align-items: center;
-  gap: 2vw;
+  gap: 2rem;
 }
 
 .navbar .logo {
-  font-size: 2.5rem;
+  font-size: 2rem; 
   color: var(--primary-color);
+  font-weight: 700;
 }
 
 .navbar .navbarLeft ul {
   display: flex;
   align-items: center;
   list-style-type: none;
-  gap: 1vw;
-  font-size: 1.2rem;
+  gap: 1rem;
+  font-size: 1rem; 
+}
+
+.navbar .navbarLeft ul li a:hover {
+  color: var(--accent-color);
 }
 
 .buildResume {
-  padding: 10px 12px;
-  font-size: 1.2rem;
+  padding: 12px 20px;
+  font-size: 1rem; 
   border: none;
-  border-radius: 6px;
-  outline: none;
+  border-radius: 8px;
   background-color: var(--primary-color);
   color: white;
   font-weight: 500;
   cursor: pointer;
-  transition: color ease-in-out 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .buildResume:hover {
-  background-color: #2e6f89;
-}
-
-.buildResume a {
-  color: white;
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
+  transform: scale(1.05);
 }
 
 .heroSection {
   width: 100%;
-  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .heroSection .heroSectionLeft {
   width: 40%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  gap: 1.5vw;
+  gap: 1.5rem;
 }
 
 .heroSection .heroSectionLeft h1 {
   font-size: 2.5rem;
   color: var(--primary-color);
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
+.heroSection .heroSectionLeft p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.heroSection .heroSectionLeft button {
+  align-self: flex-start; 
+  width: auto; }
+
 .heroSection .heroSectionRight {
-  width: 60%;
-  height: 100%;
+  width: 45%;
   display: flex;
   align-items: center;
-  justify-content: end;
-  padding-right: 2vw;
+  justify-content: center;
 }
 
 .heroSection .heroSectionRight .resumeImage {
-  height: 95%;
-  border: 5px solid var(--primary-color);
+  max-width: 100%; 
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+button a {
+  color: inherit;
+}
+
+/* For medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroSection .heroSectionLeft,
+  .heroSection .heroSectionRight {
+    width: 100%;
+    text-align: center;
+  }
+
+  .heroSection .heroSectionRight {
+    margin-top: 1rem;
+  }
+
+  .heroSection .heroSectionRight .resumeImage {
+    width: 80%;
+  }
+
+  .heroSection .heroSectionLeft h1 {
+    font-size: 1.8rem;
+  }
+
+  .heroSection .heroSectionLeft p {
+    font-size: 1rem;
+  }
+  .heroSection .heroSectionLeft button{
+    align-self: center;
+  }
+
+  .buildResume {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+ 
+
+}
+
+/* For extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .heroSection .heroSectionLeft h1 {
+    font-size: 1.5rem;
+  }
+
+  .heroSection .heroSectionLeft p {
+    font-size: 0.85rem;
+  }
+
+  .heroSection .heroSectionRight .resumeImage {
+    width: 90%;
+  }
+
+  .buildResume {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
 }

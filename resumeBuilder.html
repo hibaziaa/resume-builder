@@ -4,45 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generate Resume</title>
+    <title>Resume Generator</title>
     <link rel="stylesheet" href="./resumeBuilder.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
+    <div class="main">
+        <h3>
+            fill in the details to generate your resume
+        </h3>
+        <div class="form">
 
-    <h1>
-        Generate Your Resume
-    </h1>
-    <div class="form">
-        <div class="left">
-            <input placeholder="Your Name" type="text" class="name">
-            <input placeholder="Your Title" type="text" class="title">
-            <input placeholder="Your LinkedIn url" type="url" class="linkedin">
-            <input placeholder="Your FaceBook url" type="url" class="facebook">
-            <input placeholder="Your Twitter url" type="url" class="twitter">
-            <input placeholder="Your Portfolio url" type="url" class="portfolio">
-        </div>
-
-        <div class="right">
-            <textarea name="" placeholder="Your Skills (Comma separated)" class="skills" rows="10" cols="60"></textarea>
-            <textarea name="" placeholder="Your About" class="aboutMe" rows="10" cols="60"></textarea>
-            <div class="container">
-                <textarea name="" placeholder="Your Education" class="cont education" rows="10" cols="60"></textarea>
-                <button class="add addEducation">Add another</button>
+            <div class="left">
+                <input type="file" placeholder="Select your Display Picture" class="displayPicture" accept="image/*">
+                <input placeholder="Your First Name" type="text" class="nameField">
+                <input placeholder="Your Last Name" type="text" class="lastNameField">
+                <input placeholder="Your Title" type="text" class="titleField">
+                <input placeholder="Your Phone Number" type="number" class="phoneNumberField">
+                <input placeholder="Your E-mail" type="email" class="emailField">
+                <input placeholder="Your LinkedIn url" type="url" class="linkedinField">
+                <input placeholder="Your FaceBook url" type="url" class="facebookField">
             </div>
 
-            <div class="container">
-                <textarea name="" placeholder="Your Experience" class="cont experience" rows="10" cols="60"></textarea>
-                <button class="add addExperience">Add another</button>
-            </div>
+            <div class="right">
+                <textarea name="" placeholder="Languages (Comma separated)" class="languagesField" rows="5"
+                    cols="30"></textarea>
+                <textarea name="" placeholder="Your Skills (Comma separated)" class="skillsField" rows="5"
+                    cols="30"></textarea>
+                <textarea name="" placeholder="Your About" class="aboutMe" rows="5" cols="30"></textarea>
+                <div class="container">
+                    <textarea name="" placeholder="Your Education" class="education" rows="5" cols="30"></textarea>
+                    <button class="add addEducation">Add more</button>
+                </div>
 
+                <div class="container">
+                    <textarea name="" placeholder="Your Experience" class="experience" rows="5" cols="30"></textarea>
+                    <button class="add addExperience">Add more</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="btnContainer">
+            <button class="generateResume">
+                Generate Resume
+            </button>
         </div>
     </div>
-    <div class="btnContainer">
-        <button class="generateResume">
-            Generate Resume
-        </button>
+
+    <div class="resumeContainer">
+        <div class="resume">
+            <div class="left">
+                <img src="/blankProfilePicture.jpg" alt="profile" class="profilePicture">
+                <div class="contactContainer">
+                    <h2>
+                        Contact
+                    </h2>
+                    <div class="row">
+                        <i class="ri-phone-fill"></i>
+                        <a href="#" class="phoneNumber">Phone Number</a>
+                    </div>
+                    <div class="row">
+                        <i class="ri-mail-fill"></i>
+                        <a href="#" class="mail">Mail</a>
+                    </div>
+                    <div class="row">
+                        <i class="ri-linkedin-box-fill"></i>
+                        <a href="#" class="linkedin">Linkedin</a>
+                    </div>
+                    <div class="row">
+                        <i class="ri-facebook-circle-fill"></i>
+                        <a href="#" class="facebook">Facebook</a>
+                    </div>
+                </div>
+                <div class="skillsContainer">
+                    <h2>
+                        Skills
+                    </h2>
+                    <div class="skills">
+                        <div class="skillsItems">
+                            TypeScript
+                        </div>
+                        <div class="skillsItems">
+                            JavaScript
+                        </div>
+                        <div class="skillsItems">
+                            BootStrap
+                        </div>
+                        <div class="skillsItems">
+                            Tailwind Css
+                        </div>
+                    </div>
+                </div>
+                <div class="languagesContainer">
+                    <h2>
+                        Languages
+                    </h2>
+                    <div class="languages">
+                        <div class="langsItems">
+                            TypeScript
+                        </div>
+                        <div class="langsItems">
+                            JavaScript
+                        </div>
+                        <div class="langsItems">
+                            BootStrap
+                        </div>
+                        <div class="langsItems">
+                            Tailwind Css
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="nameContainer">
+                    <h2 class="firstName">Ayan</h2>
+                    <h2 class="lastName">Zia</h2>
+                </div>
+                <p class="title">
+                    Software Engineer
+                </p>
+                <div class="aboutContainer">
+                    <div class="aboutLabel">About Me</div>
+                    <div class="aboutSection">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, cumque.
+                        Dolore culpa odit ullam esse quam, assumenda aperiam perspiciatis nulla aut. Minus vero neque
+                        soluta sequ onem soluta minima est dolorum voluptas provident? Animircitationem voluptas
+                        accusamus nobis eligendi a similique dicta ratione? Corrupti velit dicta possimus deleniti, unde
+                        quae perspiciatis sed obcaecati nulla amet quos eum. Qui omnis atque, nemo vel id a placeat? Qui
+                        maxime ut odit distinctio vero totam enim.</div>
+                </div>
+                <div class="educationContainer">
+                    <div class="educationLabel">Education</div>
+                    <div class="educationSection">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sint
+                        exercitationem alias ipsam enim dolorum accusamus? Quae accusamus minus, cumque dolor commodi
+                        natus quam fugit officiis quia ullam necessitatibus assumenda.</div>
+                </div>
+                <div class="experienceContainer">
+                    <div class="experienceLabel">Experience</div>
+                    <div class="experienceSection">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nihil
+                        nesciunt molestias dolorem ipsam quos, id modi inventore harum, libero illum saepe obcaecati,
+                        nam veniam.</div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 
